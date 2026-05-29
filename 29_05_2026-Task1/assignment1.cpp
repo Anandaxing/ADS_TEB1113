@@ -25,7 +25,7 @@ void SearchStudentByID(Students students[], int *ID, int *size) {
 void DisplayAllRecords(Students students[], int *size) {
     std::cout<<"***** Display All Student's Record *****\n";
     for(int i=0;i<*size;i++) {
-        std::cout<<i+1<<". INFOMARTION: \n";
+        std::cout<<i+1<<". INFOMATION: \n";
         std::cout<<"Student's id: "<<students[i].ID<<std::endl;
         std::cout<<"Student's name: "<<students[i].name<<std::endl;
         std::cout<<"Student's course: "<<students[i].course<<std::endl;
