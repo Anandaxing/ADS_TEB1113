@@ -35,40 +35,81 @@ void DisplayAllRecords(Students students[], int *size) {
 }
 
 void UpdateByID(Students students[], int *ID, int *size, Students new_data) {
+    bool found = false;
     for(int i=0;i<*size;i++) {
         if(students[i].ID == *ID) {
             students[i] = new_data;
             std::cout<<"***** Updated Student's Information *****\n";
             SearchStudentByID(students, &students[i].ID, &*size);
+            found = true;
             break;
         }
     }
+    if(!found) std::cout<<"There is no student with id "<<*ID<<std::endl;
 }
 
 int main() {
     // Variables initialized
-    int total_students = 5;
+    int total_students;
+
+    std::cout<<"How many students: ";
+    std::cin>>total_students;
+    std::cin.ignore();
+
     Students students[total_students];
 
-    // Store 5 students information
-    students[0] = {24006001, 18, "Eleanor Vance", "BCS"};
-    students[1] = {24006002, 18, "Marcus Sterling", "BCS"};
-    students[2] = {24006003, 19, "Chloe Chen", "BIT"};
-    students[3] = {24006004, 17, "Julian Bautista", "BIT"};
-    students[4] = {24006005, 20, "Sarah Jenkins", "BIS"};
-
+    // Store every students information
+    for(int i=0;i<total_students;i++) {
+        std::cout<<"Insert information for student #"<<i+1<<std::endl;
+        std::cout<<"ID: ";
+        std::cin>>students[i].ID;
+        std::cout<<"Name: ";
+        std::cin>>students[i].name;
+        std::cout<<"Course: ";
+        std::cin>>students[i].course;
+        std::cout<<"Age: ";
+        std::cin>>students[i].age;
+        std::cout<<std::endl;
+    }
     // Display all students records
     DisplayAllRecords(students, &total_students);
     
     // Search a student by id
-    int target_id = 24006002;
-    std::cout<<"***** Student's information with id "<<target_id<<" ******\n";
-    SearchStudentByID(students, &target_id, &total_students);
+    char option;
+    int target_id;
+    std::cout<<"Would like to search a student by its id (y/n): ";
+    std::cin>>option;
+    std::cin.ignore();
+    if(tolower(option) == 'y') {
+        std::cin>>target_id;
+        std::cin.ignore();
+        std::cout<<"***** Student's information with id "<<target_id<<" ******\n";
+        SearchStudentByID(students, &target_id, &total_students);
+    }
     
     // Update one student record
-    int update_by_id = 24006003;
-    Students new_data = {24006003, 18, "Julian Batista", "BCS"};
-    UpdateByID(students, &target_id, &total_students, new_data);
+    int update_by_id;
+    std::cout<<"Would like to change information of a student by its id (y/n): ";
+    if(tolower(option) == 'y') {
+        int id, age;
+        std::string name, course;
+        std::cout<<"Insert target id: ";
+        std::cin>>update_by_id;
+        std::cin.ignore();
+        std::cout<<"Insert new data for id: ";
+        std::cin>>id;
+        std::cin.ignore();
+        std::cout<<"Insert new data for name: ";
+        getline(std::cin, name);
+        std::cout<<"Insert new data for course: ";
+        std::cin>>course;
+        std::cout<<"Insert new data for age: ";
+        std::cin>>age;
+        std::cin.ignore();
+
+        Students new_data = {id, age, name, course};
+        UpdateByID(students, &target_id, &total_students, new_data);
+    }
     
     std::cin.get();
     return 0;
