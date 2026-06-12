@@ -17,13 +17,17 @@ int CountNode(Node *root) {
   return CountNode(root->left) + CountNode(root->right);
 }
 
+void FindAnc(Node *root, std::vector<std::vector<int>> the_matrix, std::vector<int> anc) {
+  if(root == nullptr) return;
+  
+}
+
 std::vector<std::vector<int>> Construct(Node *root) {
   std::vector<std::vector<int>> the_matrix;
   int vector_size = CountNode(root);
   for(int i=0;i<vector_size;i++) {
     the_matrix.push_back(std::vector<int>(vector_size, 0));
   }
-  
 }
 
 int main() {
