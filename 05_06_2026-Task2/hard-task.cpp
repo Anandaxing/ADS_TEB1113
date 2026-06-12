@@ -13,8 +13,8 @@ class Node {
 };
 
 int CountNode(Node *root) {
-  if(root == nullptr) return 1;
-  return CountNode(root->left) + CountNode(root->right);
+  if(root == nullptr) return 0;
+  return CountNode(root->left) + CountNode(root->right) + 1;
 }
 
 void FindAnc(Node *root, std::vector<int> anc, std::vector<std::vector<int>> &the_matrix) {
@@ -32,7 +32,7 @@ void FindAnc(Node *root, std::vector<int> anc, std::vector<std::vector<int>> &th
 std::vector<std::vector<int>> Construct(Node *root) {
   std::vector<std::vector<int>> the_matrix;
   std::vector<int> anc;
-  int vector_size = CountNode(root)-1;
+  int vector_size = CountNode(root);
   for(int i=0;i<vector_size;i++) {
     the_matrix.push_back(std::vector<int>(vector_size, 0));
   }
