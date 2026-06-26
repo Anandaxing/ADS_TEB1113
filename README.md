@@ -11,19 +11,19 @@ Bachelor of Computer Science
 
 Make sure to have C++ compiler installed inside the local computer and compile the cpp file
 ```bash
-// Method 1
+# Method 1
 g++ main.cpp
 
-// Method 2
+# Method 2
 gcc main.cpp
 ```
 
 Execute the .exe file on Windows OR .out on MacOS
 ```bash
-// Windows
+# Windows
 ./a.exe
 
-// Macos
+# Macos
 ./a.out
 ```
 
