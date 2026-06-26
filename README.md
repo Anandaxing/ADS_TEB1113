@@ -44,14 +44,10 @@ ADS_TEB1113/
 │       └── doubly.cpp
 ├── 2026_06_26-Task5/
 │   ├── queue/
-│   │   ├── ._queue.cpp
 │   │   └── queue.cpp
 │   └── stack/
-│       ├── ._a.out
-│       ├── ._stack.cpp
 │       ├── a.out
 │       └── stack.cpp
-├── ._README.md
 ├── .gitignore
 └── README.md
 ```

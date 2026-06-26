@@ -18,6 +18,10 @@ class Stack {
 
     // pop method
     Stack *pop(Stack *currentNode) {
+      if(!currentNode) {
+        std::cout<<"The stack is emtpy";
+        return currentNode;
+      }
       currentNode = currentNode->next;
       return currentNode;
     }
@@ -38,6 +42,7 @@ int main() {
 
   node1 = node1->push(node2, node1);
   node1 = node1->push(node3, node1);
+  node1 = node1->push(node4, node1);
   node1 = node1->pop(node1);
 
   std::cout<<"The top value of the stack is "<<node1->peek(node1)<<std::endl;
