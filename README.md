@@ -1,6 +1,11 @@
 # Algorithm & Data Structure TEB1113
 
-This github repository is created with the purpose of storing ADS Lab assignments and tasks.
+This github repository is created with the purpose of storing ADS Lab assignments and tasks. By : 
+```bash
+Name : Ananda Adiputra
+Id : 24006462
+Bachelor of Computer Science
+```
 
 ## How to run the program
 
