@@ -15,7 +15,7 @@ class Stack {
       newNode->next = current;
       return newNode;
     }
-    
+
     // pop method
     Stack *pop(Stack *currentNode) {
       currentNode = currentNode->next;
@@ -23,6 +23,10 @@ class Stack {
     }
 
     // peek method
+    std::string peek(Stack *currentNode) {
+      std::string topValue = currentNode->name;
+      return topValue;
+    }
 
 };
 
@@ -36,10 +40,11 @@ int main() {
   node1 = node1->push(node3, node1);
   node1 = node1->pop(node1);
 
+  std::cout<<"The top value of the stack is "<<node1->peek(node1)<<std::endl;
 
   Stack *current = node1;
 
-  for(int i=0;i<3;i++) {
+  while(current) {
     std::cout<<current->name<<std::endl;
     current = current->next;
   }
