@@ -11,7 +11,7 @@ g++ main.cpp
 gcc main.cpp
 ```
 
-Execute the .exe file on Windows and .out on MacOS
+Execute the .exe file on Windows OR .out on MacOS
 ```bash
 ./a.exe
 // or
