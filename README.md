@@ -3,7 +3,7 @@
 This github repository is created with the purpose of storing ADS Lab assignments and tasks. By : 
 ```bash
 Name : Ananda Adiputra
-Id : 24006462
+Id   : 24006462
 Bachelor of Computer Science
 ```
 
@@ -11,15 +11,19 @@ Bachelor of Computer Science
 
 Make sure to have C++ compiler installed inside the local computer and compile the cpp file
 ```bash
+// Method 1
 g++ main.cpp
-// or
+
+// Method 2
 gcc main.cpp
 ```
 
 Execute the .exe file on Windows OR .out on MacOS
 ```bash
+// Windows
 ./a.exe
-// or
+
+// Macos
 ./a.out
 ```
 
@@ -49,10 +53,11 @@ ADS_TEB1113/
 │       └── doubly.cpp
 ├── 2026_06_26-Task5/
 │   ├── queue/
-│   │   └── queue.cpp
+│   │   └── queue_array.cpp
 │   └── stack/
 │       ├── a.out
-│       └── stack.cpp
+│       ├── stack_array.cpp
+│       └── stack_linked_list.cpp
 ├── .gitignore
 └── README.md
 ```
