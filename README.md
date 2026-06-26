@@ -1,6 +1,6 @@
 # Algorithm & Data Structure TEB1113
 
-This github repository is created withe the purpose of storing ADS Lab assignments and tasks.
+This github repository is created with the purpose of storing ADS Lab assignments and tasks.
 
 ## How to run the program
 
@@ -19,6 +19,7 @@ Execute the .exe file on Windows and .out on MacOS
 ```
 
 ## Current folders included 
+``` bash
 ADS_TEB1113/
 ├── 2026_05_29-Task1/
 │   ├── a.out
@@ -53,3 +54,4 @@ ADS_TEB1113/
 ├── ._README.md
 ├── .gitignore
 └── README.md
+```
