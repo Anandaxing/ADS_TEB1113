@@ -53,7 +53,9 @@ ADS_TEB1113/
 │       └── doubly.cpp
 ├── 2026_06_26-Task5/
 │   ├── queue/
-│   │   └── queue_array.cpp
+│   │   ├── a.out
+│   │   ├── queue_array.cpp
+│   │   └── queue_linked_list.cpp
 │   └── stack/
 │       ├── a.out
 │       ├── stack_array.cpp
